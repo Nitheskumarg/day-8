@@ -1,0 +1,43 @@
+#include <stdio.h>
+
+int main()
+{
+    int n,s=0,l=0;
+    scanf("%d",&n);
+    int t = n;
+    int n1;
+    while(n>0)
+    {
+        l=n%10;
+        n1 = n1*10 + l;
+        n=n/10;
+        
+    }
+    int f=0,f1=0;
+    for(int i=2;i<t/2;i++)
+    {
+        if(t%i==0)
+        {
+            f=1;
+            break;
+        }
+    }
+    for(int j=2;j<n1/2;j++)
+    {
+        if(n1%j==0)
+        {
+            f1=1;
+            break;
+        }
+    }
+    if(f==0 && f1==0)
+    {
+        printf("twisted prime");
+    }
+    else
+    {
+        printf("not twisted prime");
+    }
+
+    return 0;
+}
